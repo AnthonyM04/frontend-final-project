@@ -6,16 +6,16 @@ import Form from "react-bootstrap/Form"
 
 
 export default function BlogEdit({ blogId, setBlogs }) {
-
+  // useState hook is called to cap
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
   const [image, setImage] = useState()
   const [review, setReview] = useState("")
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
-
+// function convertFile converts the image into binary then base64
   function convertFile(files) {
     if (files) {
       const fileRef = files[0] || ""
